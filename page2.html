@@ -141,6 +141,23 @@ button:active {
     transform: scale(0.96);
 }
 
+.button-secondary {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.85);
+    color: #b52c68;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
 .footer {
     margin-top: 20px;
     color: #a83265;
@@ -219,6 +236,11 @@ button:active {
         </strong>
     </div>
 
+    <!-- Tombol kembali -->
+    <button class="button-secondary" onclick="previousPage()">
+        KEMBALI ◀
+    </button>
+
     <button onclick="nextPage()">
         LANJUT KE KEJUTAN BERIKUTNYA 🎁
     </button>
@@ -230,6 +252,10 @@ button:active {
 </main>
 
 <script>
+function previousPage() {
+    window.location.href = "index.html";
+}
+
 function nextPage() {
     window.location.href = "page3.html";
 }
