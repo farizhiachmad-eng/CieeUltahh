@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Kesayanganku ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ffc0d9,
+        #ff8fb8,
+        #ffb6d5,
+        #ffe0ec
+    );
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: muncul 1s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.45);
+    color: #a83265;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    color: #b52c68;
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.script {
+    font-family: 'Sacramento', cursive;
+    color: #e44283;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.video-card {
+    padding: 10px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 15px 40px rgba(180,50,100,0.18);
+    backdrop-filter: blur(12px);
+}
+
+.video-frame {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    max-height: 55vh;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: rgba(150,40,90,0.12);
+}
+
+.video-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.note {
+    margin: 22px 5px;
+    color: #873454;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.note strong {
+    color: #b52c68;
+}
+
+button {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff4f91, #e52e75);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 7px 20px rgba(229,46,117,0.3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.footer {
+    margin-top: 20px;
+    color: #a83265;
+    font-size: 10px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: melayang linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes melayang {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+    <div class="badge">
+        A LITTLE SURPRISE FOR YOU 💌
+    </div>
+
+    <h1>Untuk Kamu,</h1>
+
+    <div class="script">
+        Sayangku ❤️
+    </div>
+
+    <div class="video-card">
+
+        <div class="video-frame">
+
+            <!-- =================================== -->
+            <!-- 🎬 TEMPEL ID VIDEO KAMU DI SINI -->
+            <!-- =================================== -->
+
+            <iframe
+                src="https://drive.google.com/file/d/ID_VIDEO_KAMU/preview"
+                title="Video Ucapan Ulang Tahun"
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+
+            <!-- =================================== -->
+            <!-- ❤️ AKHIR BAGIAN VIDEO -->
+            <!-- =================================== -->
+
+        </div>
+
+    </div>
+
+    <div class="note">
+        Ada sesuatu yang ingin aku sampaikan<br>
+        khusus untuk kamu, sayanggg. 🥹<br>
+
+        <strong>
+            Selamat menonton, cintakuuu! ❤️
+        </strong>
+    </div>
+
+    <button onclick="nextPage()">
+        LANJUT KE KEJUTAN BERIKUTNYA 🎁
+    </button>
+
+    <div class="footer">
+        Made with love, just for you ♡
+    </div>
+
+</main>
+
+<script>
+function nextPage() {
+    window.location.href = "page3.html";
+}
+
+// Animasi hati melayang
+const hearts = ["❤️", "💗", "💕", "💖", "🌸"];
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.textContent =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (12 + Math.random() * 18) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 700);
+</script>
+
+</body>
+</html>
