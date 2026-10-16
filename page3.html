@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Untuk Kesayanganku ❤️</title>
+<title>Hadiah Untuk Sayangku ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
 
@@ -17,7 +17,7 @@
 
 body {
     min-height: 100vh;
-    padding: 30px 18px;
+    padding: 25px 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 430px;
+    max-width: 420px;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -52,11 +52,11 @@ body {
 @keyframes muncul {
     from {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(25px) scale(0.95);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -68,62 +68,111 @@ body {
     color: #a83265;
     font-size: 10px;
     letter-spacing: 2px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 h1 {
     color: #b52c68;
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.4;
 }
 
 .script {
     font-family: 'Sacramento', cursive;
     color: #e44283;
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: 43px;
+    margin-bottom: 15px;
 }
 
-.video-card {
-    padding: 10px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.4);
+.card {
+    padding: 25px 20px;
+    border-radius: 28px;
+    background: rgba(255,255,255,0.38);
     border: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 15px 40px rgba(180,50,100,0.18);
+    box-shadow: 0 15px 40px rgba(180,50,100,0.17);
     backdrop-filter: blur(12px);
 }
 
-.video-frame {
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    max-height: 55vh;
-    min-height: 250px;
-    overflow: hidden;
-    border-radius: 18px;
-    background: rgba(150,40,90,0.12);
+.envelope-area {
+    margin: 15px auto 25px;
+    width: 150px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: melayang 2.5s ease-in-out infinite;
 }
 
-.video-frame iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
+.envelope {
+    font-size: 105px;
+    filter: drop-shadow(0 8px 8px rgba(160,40,90,0.15));
 }
 
-.note {
-    margin: 22px 5px;
+.heart-icon {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    font-size: 35px;
+    animation: detak 1.2s infinite;
+}
+
+@keyframes melayang {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes detak {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.message {
     color: #873454;
     font-size: 13px;
     line-height: 1.9;
+    margin-bottom: 20px;
 }
 
-.note strong {
+.message strong {
     color: #b52c68;
 }
 
-button {
+.gift-box {
+    display: none;
+    margin-top: 20px;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.65);
+    animation: muncul 0.7s ease;
+}
+
+.gift-box.show {
+    display: block;
+}
+
+.gift-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.gift-box h2 {
+    color: #b52c68;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.gift-box p {
+    color: #873454;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+button, .gift-button {
+    display: block;
     width: 100%;
-    padding: 15px 10px;
+    padding: 14px 10px;
     border: none;
     border-radius: 50px;
     background: linear-gradient(135deg, #ff4f91, #e52e75);
@@ -131,13 +180,14 @@ button {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
     box-shadow: 0 7px 20px rgba(229,46,117,0.3);
     cursor: pointer;
     transition: 0.3s;
 }
 
-button:active {
+button:active, .gift-button:active {
     transform: scale(0.96);
 }
 
@@ -147,24 +197,20 @@ button:active {
     font-size: 10px;
 }
 
-.heart {
+.heart-float {
     position: fixed;
     bottom: -30px;
-    animation: melayang linear forwards;
+    animation: naik linear forwards;
     pointer-events: none;
     z-index: 1;
 }
 
-@keyframes melayang {
+@keyframes naik {
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 0;
     }
-
-    15% {
-        opacity: 0.8;
-    }
-
+    15% { opacity: 0.8; }
     100% {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
@@ -178,80 +224,104 @@ button:active {
 <main class="container">
 
     <div class="badge">
-        A LITTLE SURPRISE FOR YOU 💌
+        YOUR LAST SURPRISE 💌
     </div>
 
-    <h1>Untuk Kamu,</h1>
+    <h1>Ada Hadiah Untukmu</h1>
 
     <div class="script">
-        Sayangku ❤️
+        Cintakuuu ❤️
     </div>
 
-    <div class="video-card">
+    <div class="card">
 
-        <div class="video-frame">
+        <div class="envelope-area">
+            <div class="envelope">💌</div>
+            <div class="heart-icon">💗</div>
+        </div>
 
-            <!-- =================================== -->
-            <!-- 🎬 TEMPEL ID VIDEO KAMU DI SINI -->
-            <!-- =================================== -->
+        <div class="message">
+            Hehehe, akhirnya kamu sampai di sini! 🥹💕<br><br>
 
-            <iframe
-                src="https://drive.google.com/file/d/ID_VIDEO_KAMU/preview"
-                title="Video Ucapan Ulang Tahun"
-                allow="autoplay; fullscreen"
-                allowfullscreen>
-            </iframe>
+            Aku sudah menyiapkan sedikit hadiah untukmu.
+            Mungkin sederhana, tapi aku memberikannya
+            dengan penuh rasa sayang.<br><br>
 
-            <!-- =================================== -->
-            <!-- ❤️ AKHIR BAGIAN VIDEO -->
-            <!-- =================================== -->
+            <strong>
+                Terima kasih sudah hadir dalam hidupku,
+                sayangku. ❤️
+            </strong>
+        </div>
+
+        <button id="openButton" onclick="openGift()">
+            BUKA SURAT DAN HADIAHMU 💝
+        </button>
+
+        <div class="gift-box" id="giftBox">
+
+            <div class="gift-icon">🎁💗</div>
+
+            <h2>Untuk Kesayanganku!</h2>
+
+            <p>
+                Selamat ulang tahun, cintakuuu! 🥹❤️<br>
+                Semoga hadiah kecil ini bisa membuatmu tersenyum.<br><br>
+
+                Aku berharap kamu selalu diberi kebahagiaan,
+                kesehatan, dan kemudahan dalam setiap langkahmu.<br><br>
+
+                <strong>
+                    I love you, sayangku! ❤️
+                </strong>
+            </p>
+
+            <!-- LINK DANA KAGET SUDAH DIPASANG -->
+
+            <a
+                class="gift-button"
+                href="https://link.dana.id/danakaget?c=svrg2swfb&r=iXjaJr&orderId=20261016101214738315010300166594703571981"
+                target="_blank"
+                rel="noopener noreferrer">
+                KLAIM HADIAHMU SEKARANG 
+            </a>
 
         </div>
 
     </div>
 
-    <div class="note">
-        Ada sesuatu yang ingin aku sampaikan<br>
-        khusus untuk kamu, sayanggg. 🥹<br>
-
-        <strong>
-            Selamat menonton, cintakuuu! ❤️
-        </strong>
-    </div>
-
-    <button onclick="nextPage()">
-        LANJUT KE KEJUTAN BERIKUTNYA 🎁
-    </button>
-
     <div class="footer">
-        Made with love, just for you ♡
+        A little gift, with a lot of love ♡
     </div>
 
 </main>
 
 <script>
-function nextPage() {
-    window.location.href = "page3.html";
+function openGift() {
+    const giftBox = document.getElementById("giftBox");
+    const button = document.getElementById("openButton");
+
+    giftBox.classList.add("show");
+    button.style.display = "none";
+
+    giftBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 }
 
-// Animasi hati melayang
 const hearts = ["❤️", "💗", "💕", "💖", "🌸"];
 
 function createHeart() {
     const heart = document.createElement("div");
 
-    heart.className = "heart";
+    heart.className = "heart-float";
 
     heart.textContent =
         hearts[Math.floor(Math.random() * hearts.length)];
 
     heart.style.left = Math.random() * 100 + "vw";
-
-    heart.style.fontSize =
-        (12 + Math.random() * 18) + "px";
-
-    heart.style.animationDuration =
-        (5 + Math.random() * 5) + "s";
+    heart.style.fontSize = (12 + Math.random() * 18) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
 
     document.body.appendChild(heart);
 
