@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #ffc0d9,
+        #ff8fb8,
+        #ffb6d5,
+        #ffe0ec
+    );
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    width: 88%;
+    max-width: 370px;
+    padding: 40px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(180,50,100,0.15);
+    backdrop-filter: blur(15px);
+    animation: appear 1.2s ease;
+    z-index: 2;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cake {
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.small-title {
+    color: #a83265;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #b52c68;
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.script {
+    font-family: 'Sacramento', cursive;
+    font-size: 35px;
+    color: #e44283;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #8f315b;
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+button {
+    width: 100%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff4f91, #e52e75);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 7px 20px rgba(229,46,117,0.3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.footer {
+    color: #a83265;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% { opacity: 0.8; }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.star {
+    position: fixed;
+    color: white;
+    animation: twinkle 2s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.2; transform: scale(0.7); }
+    to { opacity: 1; transform: scale(1.2); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="cake">🎂</div>
+
+    <div class="small-title">A SPECIAL DAY FOR YOU</div>
+
+    <h1>Selamat Ulang Tahun</h1>
+
+    <div class="script">Sayangku ❤️</div>
+
+    <p class="subtitle">
+        Semoga hari ini dipenuhi<br>
+        kebahagiaan dan senyuman. 💗
+    </p>
+
+    <button onclick="nextPage()">
+        BUKA KEJUTANMU 💌
+    </button>
+
+    <div class="footer">
+        Made with love, just for you ♡
+    </div>
+
+</div>
+
+<script>
+function nextPage() {
+    // Nanti diarahkan ke Page 2.
+    // Ganti dengan nama file Page 2 jika sudah dibuat.
+    window.location.href = "page2.html";
+}
+
+// Animasi hati melayang
+const hearts = ["❤️", "💗", "💕", "💖", "🌸"];
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = hearts[
+        Math.floor(Math.random() * hearts.length)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 18) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 600);
+
+// Bintang kecil berkelap-kelip
+for (let i = 0; i < 22; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.innerHTML = "✦";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.fontSize = (5 + Math.random() * 9) + "px";
+    star.style.animationDelay = Math.random() * 2 + "s";
+
+    document.body.appendChild(star);
+}
+</script>
+
+</body>
+</html>
