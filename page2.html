@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sebelum Melanjutkan ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 22px;
+    background: linear-gradient(-45deg, #ff9aaf, #ffd6e7, #e7b7ff, #ffc4d6);
+    background-size: 400% 400%;
+    animation: backgroundMove 10s ease infinite;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    width: 100%;
+    max-width: 390px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 28px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 45px rgba(180, 70, 120, 0.20);
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.headphone {
+    font-size: 75px;
+    margin-bottom: 15px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    font-size: 25px;
+    color: #a3165b;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #74334f;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.note {
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    padding: 14px;
+    color: #a3165b;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4f91, #c445b5);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 7px 20px rgba(195, 55, 125, 0.25);
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #985577;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    font-size: 20px;
+    opacity: 0.65;
+    animation: rise linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="headphone">🎧</div>
+
+    <h1>Sebelum Lanjut... ❤️</h1>
+
+    <p>
+        Sayanggg, sebelum kamu melanjutkan ke halaman berikutnya,
+        aku mau minta tolong sebentar yaa 🥺💗
+    </p>
+
+    <p>
+        Coba pakai headset terlebih dahulu,
+        lalu atur volumenya supaya nyaman didengar.
+        Ada sesuatu yang sudah aku siapkan khusus buat kamu. 💕
+    </p>
+
+    <div class="note">
+        🎶 Pakai headset dulu yaa, sayang.<br>
+        Kalau sudah siap, baru tekan tombol di bawah ini. ❤️
+    </div>
+
+    <button onclick="nextPage()">
+        Aku Sudah Siap 💗 ➜
+    </button>
+
+    <div class="footer">
+        Dibuat dengan penuh cinta ❤️ khusus untuk kamu
+    </div>
+
+</div>
+
+<script>
+function nextPage() {
+    window.location.href = "page3.html";
+}
+
+// Animasi hati
+const symbols = ["❤️", "💕", "💗", "💖", "🌸"];
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+    heart.style.fontSize = (14 + Math.random() * 18) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
