@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu, Sayangku ❤️</title>
 
-<title>Untuk Kesayanganku ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -16,172 +15,128 @@
 }
 
 body {
-    min-height: 100vh;
-    padding: 30px 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(
-        135deg,
-        #ffc0d9,
-        #ff8fb8,
-        #ffb6d5,
-        #ffe0ec
-    );
-    background-size: 400% 400%;
-    animation: bgMove 12s ease infinite;
+    background: linear-gradient(135deg, #ffadd2, #ff8fbd, #ffc1df);
+    min-height: 100vh;
+    color: #a82e68;
     overflow-x: hidden;
-}
-
-@keyframes bgMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .container {
     width: 100%;
-    max-width: 430px;
+    max-width: 520px;
+    margin: auto;
+    padding: 35px 20px 25px;
     text-align: center;
-    position: relative;
-    z-index: 2;
-    animation: muncul 1s ease;
-}
-
-@keyframes muncul {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .badge {
     display: inline-block;
-    padding: 8px 18px;
+    padding: 10px 20px;
     border-radius: 30px;
-    background: rgba(255,255,255,0.45);
-    color: #a83265;
+    background: rgba(255,255,255,.45);
+    color: #a34370;
     font-size: 10px;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
 h1 {
-    color: #b52c68;
-    font-size: 30px;
+    font-size: 32px;
+    font-weight: 700;
     line-height: 1.4;
 }
 
 .script {
-    font-family: 'Sacramento', cursive;
-    color: #e44283;
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 43px;
+    color: #d63384;
+    margin-bottom: 28px;
 }
 
-.video-card {
-    padding: 10px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.4);
-    border: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 15px 40px rgba(180,50,100,0.18);
-    backdrop-filter: blur(12px);
+.video-box {
+    width: 100%;
+    padding: 12px;
+    border-radius: 28px;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(255,255,255,.8);
+    box-shadow: 0 12px 35px rgba(180,50,105,.15);
 }
 
 .video-frame {
     width: 100%;
-    aspect-ratio: 9 / 16;
-    max-height: 55vh;
-    min-height: 250px;
-    overflow: hidden;
-    border-radius: 18px;
-    background: rgba(150,40,90,0.12);
-}
-
-.video-frame iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
+    height: 520px;
     border: none;
+    border-radius: 18px;
+    background: white;
+    display: block;
 }
 
-.note {
-    margin: 22px 5px;
-    color: #873454;
-    font-size: 13px;
+.caption {
+    margin: 25px 0;
+    color: #9f3e6b;
+    font-size: 14px;
     line-height: 1.9;
 }
 
-.note strong {
-    color: #b52c68;
+.caption strong {
+    color: #a82e68;
 }
 
-button {
+.btn {
+    display: block;
     width: 100%;
-    padding: 15px 10px;
+    padding: 16px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-top: 14px;
     border: none;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #ff4f91, #e52e75);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.back {
+    color: #a82e68;
+    background: rgba(255,255,255,.85);
+}
+
+.next {
     color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0 7px 20px rgba(229,46,117,0.3);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:active {
-    transform: scale(0.96);
-}
-
-.button-secondary {
-    width: 100%;
-    padding: 12px 10px;
-    border: none;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.85);
-    color: #b52c68;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    cursor: pointer;
-    transition: 0.2s;
-    margin-bottom: 10px;
+    background: linear-gradient(90deg, #f83d8b, #e91e73);
+    box-shadow: 0 8px 20px rgba(220,30,110,.2);
 }
 
 .footer {
-    margin-top: 20px;
-    color: #a83265;
-    font-size: 10px;
+    margin-top: 25px;
+    font-size: 11px;
+    color: #a34c73;
 }
 
 .heart {
     position: fixed;
     bottom: -30px;
-    animation: melayang linear forwards;
     pointer-events: none;
+    animation: floatUp 7s linear infinite;
+    opacity: .5;
+    z-index: 0;
+}
+
+.container {
+    position: relative;
     z-index: 1;
 }
 
-@keyframes melayang {
+@keyframes floatUp {
     0% {
         transform: translateY(0) rotate(0deg);
         opacity: 0;
     }
-
     15% {
-        opacity: 0.8;
+        opacity: .6;
     }
-
     100% {
         transform: translateY(-110vh) rotate(360deg);
         opacity: 0;
@@ -192,47 +147,35 @@ button:active {
 
 <body>
 
-<main class="container">
+<div class="container">
 
     <div class="badge">
         A LITTLE SURPRISE FOR YOU 💌
     </div>
 
     <h1>Untuk Kamu,</h1>
+    <div class="script">Sayangku ❤️</div>
 
-    <div class="script">
-        Sayangku ❤️
+    <div class="video-box">
+        <iframe
+            class="video-frame"
+            src="https://drive.google.com/file/d/1HOdf5KBF8kGFPDtNHyFv-nrL0IJE6lzQ/preview"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
     </div>
 
-    <div class="video-card">
-
-        <div class="video-frame">
-
-            <iframe
-                src="https://drive.google.com/file/d/1HOdf5KBF8kGFPDtNHyFv-nrL0IJE6lzQ/view?usp=drivesdk"
-                title="Video Ucapan Ulang Tahun"
-                allow="autoplay; fullscreen"
-                allowfullscreen>
-            </iframe>
-
-        </div>
-
-    </div>
-
-    <div class="note">
+    <div class="caption">
         Ada sesuatu yang ingin aku sampaikan<br>
-        khusus untuk kamu, sayanggg. 🥹<br>
-
-        <strong>
-            Selamat menonton, cintakuuu! ❤️
-        </strong>
+        khusus untuk kamu, sayanggg 🥹💖<br>
+        <strong>Selamat menonton, cintakuuu! ❤️</strong>
     </div>
 
-    <button class="button-secondary" onclick="previousPage()">
+    <button class="btn back" onclick="history.back()">
         KEMBALI ◀
     </button>
 
-    <button onclick="nextPage()">
+    <button class="btn next" onclick="window.location.href='page4.html'">
         LANJUT KE KEJUTAN BERIKUTNYA 🎁
     </button>
 
@@ -240,41 +183,24 @@ button:active {
         Made with love, just for you ♡
     </div>
 
-</main>
+</div>
 
 <script>
-function previousPage() {
-    window.location.href = "index.html";
-}
-
-function nextPage() {
-    window.location.href = "page4.html";
-}
-
-const hearts = ["❤️", "💗", "💕", "💖", "🌸"];
-
 function createHeart() {
-    const heart = document.createElement("div");
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = ['❤️', '💕', '💗', '💖'][Math.floor(Math.random() * 4)];
 
-    heart.className = "heart";
-
-    heart.textContent =
-        hearts[Math.floor(Math.random() * hearts.length)];
-
-    heart.style.left = Math.random() * 100 + "vw";
-
-    heart.style.fontSize =
-        (12 + Math.random() * 18) + "px";
-
-    heart.style.animationDuration =
-        (5 + Math.random() * 5) + "s";
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (12 + Math.random() * 15) + 'px';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
 
     document.body.appendChild(heart);
 
     setTimeout(() => heart.remove(), 10000);
 }
 
-setInterval(createHeart, 700);
+setInterval(createHeart, 800);
 </script>
 
 </body>
